@@ -1,0 +1,164 @@
+@font-face {
+  font-family: "MinhaFonte";
+  src: url("../pieces\ nfi.otf") format("woff2"),
+    url("../pieces\ nfi.otf") format("truetype");
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lobster", Arial, sans-serif;
+  text-align: center;
+  background: rgba(230, 250, 107);
+  /* background: white; */
+}
+
+/* Ajustando a logo */
+.logo {
+  background-repeat: no-repeat;
+  background-color: rgba(230, 250, 107);
+  background-position: center;
+  font-family: "MinhaFonte";
+  padding: 20px;
+  word-spacing: 10px; /* Reduzi para melhor visualização */
+  letter-spacing: 2px;
+}
+
+header {
+  font-family: "Lobster";
+  font-size: 2em;
+  background: white;
+  color: black;
+  padding: 10px;
+}
+
+nav a {
+  font-family: "Lobster";
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+  margin: 10px;
+  font-weight: normal;
+}
+
+.hero {
+  background: url("https://receitassupreme.net/wp-content/uploads/2022/03/16-680x350.png")
+    no-repeat center;
+  background-size: cover;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Ajustando o título H2 para telas menores */
+.hero h2 {
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  position: relative; /* Alterado para evitar problemas de sobreposição */
+  top: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+}
+
+button {
+  background: #ff6600;
+  color: white;
+  border: 1px solid;
+  border-radius: 50px;
+  padding: 11px 10px;
+  cursor: pointer;
+}
+
+/* Ajustando os produtos para serem responsivos */
+#lista-produtos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.produto {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  max-width: 300px; /* Garante que os produtos não fiquem muito grandes */
+  width: 100%;
+}
+
+.produto img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Ajustando o contato */
+#contato {
+  position: relative;
+  bottom: 10px;
+  font-size: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Ajustando o footer para não cobrir conteúdo */
+footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  color: white;
+  background: #333;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+/* MEDIA QUERIES PARA RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .logo {
+    font-size: 18px;
+    word-spacing: 5px;
+  }
+
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  #lista-produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .produto {
+    width: calc(33.33% - 20px); /* 3 produtos por linha em telas grandes */
+    max-width: 250px; /* Tamanho máximo */
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    background: white;
+    border-radius: 20px;
+  }
+
+  footer {
+    font-size: 14px;
+    padding: 5px;
+  }
+}
